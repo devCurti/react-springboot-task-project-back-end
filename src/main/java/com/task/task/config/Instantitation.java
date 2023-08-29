@@ -19,10 +19,10 @@ public class Instantitation implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		
-		Task task1 = new Task(null, "Jogar lixo fora", "Jogar o lixo para fora");
-		Task task2 = new Task(null, "Jogar lixo foraaaa", "Jogar o lixo para foraaaa");
-		
-		taskRepository.saveAll(Arrays.asList(task1, task2));
+//		Task task1 = new Task(null, "Jogar lixo fora", "Jogar o lixo para fora", "false");
+//		Task task2 = new Task(null, "Jogar lixo foraaaa", "Jogar o lixo para foraaaa", "true");
+//		
+//		taskRepository.saveAll(Arrays.asList(task1, task2));
 		
 		
 	}

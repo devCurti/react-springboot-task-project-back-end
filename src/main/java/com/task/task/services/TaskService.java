@@ -28,8 +28,22 @@ public class TaskService {
 	}
 	
 	public Task fromDTO(TaskDTO taskDTO) {
-		Task task = new Task(taskDTO.id(), taskDTO.title(), taskDTO.desc());
+		Task task = new Task(taskDTO.id(), taskDTO.title(), taskDTO.desc(), taskDTO.finished());
 		return task;
+	}
+	
+	public void delete(Long id) {
+		taskRepository.deleteById(id);
+	}
+	
+	public void update(Long id) {
+		Task task = findById(id);
+		if(task.isFinished() != "true") {
+			task.setFinished("true");
+		}else {
+			task.setFinished("false");
+		}
+		taskRepository.save(task);
 	}
 	
 }
